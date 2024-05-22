@@ -27,4 +27,4 @@ for i in range(filecount): #Loops through all files
     filepath = f'{folderpath}/{subfolder}/{filename}_Mdc-T.dat' #Location for saving Mdc-T data
     np.savetxt(filepath, data) #Saves Mdc-T data
     
-print("All files were corrected and saved in subfolder.")
+print("All files were extracted and saved in subfolder.")
