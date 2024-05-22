@@ -20,7 +20,7 @@ shutil.rmtree(data_subfolder, ignore_errors=True) #Deletes data_subfolder if alr
 shutil.rmtree(plot_subfolder, ignore_errors=True) #Deletes plot_subfolder if already present
 os.mkdir(data_subfolder) #Creates data_subfolder
 os.mkdir(plot_subfolder) #Creates plot_subfolder
-files = glob.glob('*.csv') #Imports files with .csv extension
+files = glob.glob('*.csv') #Imports filenames with .csv extension
 filecount = len(files) #Counts number of files present in folderpath
 
 print(f'The following {filecount} files will be processed:')
