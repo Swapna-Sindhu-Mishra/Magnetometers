@@ -27,6 +27,6 @@ for i in range(filecount): #Loops through all files.
     data = np.column_stack((data_raw[:,0],data_raw[:,1])) #Creates an array of MH data
     filename = ''.join(files[i].split())[:-4] #Removes last 4 characters (.dat) from filename.
     filepath = f'{folderpath}/{subfolder}/{filename}_{subfolder}.dat' #Creates name and location of output
-    np.savetxt(filepath, data, delimiter='\t')  #Saves extracted MH data in subdirectory
+    np.savetxt(filepath, data, delimiter='\t')  #Saves extracted MH data in subfolder
 
 print("All files were processed succesfully. MH data files were saved.")

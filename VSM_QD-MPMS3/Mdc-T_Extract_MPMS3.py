@@ -25,6 +25,6 @@ for i in range(filecount): #Loops through all files
     #Save files
     filename = ''.join(files[i].split())[:-4] #Removes last 4 characters (.dat) from filename
     filepath = f'{folderpath}/{subfolder}/{filename}_{subfolder}.dat' #Location for saving Mdc-T data
-    np.savetxt(filepath, data) #Saves Mdc-T data
+    np.savetxt(filepath, data) #Saves Mdc-T data in subfolder
     
 print("All files were extracted and saved in subfolder.")
