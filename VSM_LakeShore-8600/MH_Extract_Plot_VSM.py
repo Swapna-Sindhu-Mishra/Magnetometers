@@ -31,7 +31,7 @@ for i in range(filecount): #Loops through all files
     data_raw = np.loadtxt(files[i], delimiter=',', skiprows=headers, usecols=[3,4]) #Loads column 3 (H) & 4 (M) from .csv file
     data = np.column_stack((data_raw[:,0],data_raw[:,1])) #Creates an array of MH data
     MH_filename = ''.join(files[i].split())[:-4] #Removes last 4 characters (.csv) from filename.
-    MH_filepath = f'{folderpath}/{data_subfolder}/{MH_filename}_MH.dat' #Creates
+    MH_filepath = f'{folderpath}/{data_subfolder}/{MH_filename}_MH.dat' #Creates name and location of output
     np.savetxt(MH_filepath, data, delimiter='\t') #Saves extracted MH data in subdirectory
     #MH plotting
     #plt.title(f'{MH_filename}', fontsize=15) #Sets MH_filename as plot title
