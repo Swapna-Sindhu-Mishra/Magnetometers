@@ -35,6 +35,6 @@ for i in range(filecount): #Loops through all files
     #Saving corrected data
     filename = ''.join(files[i].split())[:-4] #Removes last 4 characters (.dat) from filename.
     filepath = f'{folderpath}/{subfolder}/{filename}_{subfolder}.dat' #Creates name and location of output
-    np.savetxt(filepath, data)  #Saves corrected MH data in subfolder
+    np.savetxt(filepath, data, delimiter='\t')  #Saves corrected MH data in subfolder
 
 print("All files were processed succesfully. Background corrected MH data files were saved.")
