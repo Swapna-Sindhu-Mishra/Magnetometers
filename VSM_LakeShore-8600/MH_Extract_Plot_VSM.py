@@ -5,8 +5,8 @@ Outputs: Field(H) & Moment(M) data in corresponding *_MH.dat files in data_subfo
 """
 folderpath = 'C:/Users/mishra/Downloads/VSM' #Location of inputs
 data_subfolder = 'MH_Data' #Subfolder name for MH Data
-plot_subfolder='MH_Plot' #Subfolder name for MH Plots
-headers=50 #Number of headers in VSM data file i.e lines to ignore when importing
+plot_subfolder = 'MH_Plot' #Subfolder name for MH Plots
+headers = 2 #Number of headers in VSM data file i.e lines to ignore when importing
 
 import numpy as np #For importing data
 import matplotlib.pyplot as plt #For plotting data
