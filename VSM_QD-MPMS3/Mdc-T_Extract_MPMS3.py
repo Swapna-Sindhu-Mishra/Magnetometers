@@ -5,6 +5,7 @@ Outputs: *.dat files containing Temperature (T) and DC Moment (Mdc) in a subfold
 """
 folderpath = 'C:/Users/mishra/Downloads/MPMS3' #Location of inputs
 subfolder = 'Mdc-T_Extracted' #Subfolder name for output files
+headers = 45
 
 import numpy as np #For creating data arrays
 import os #For changing and creating folders
@@ -20,7 +21,7 @@ filecount = len(files) #Counts number of filenames imported
 print(f'The following {filecount} files will be processed:')
 print(files) #Prints the names of all imported filenames
 for i in range(filecount): #Loops through all files
-    data_raw = np.loadtxt(files[i], delimiter=',', skiprows=29, usecols=[2,58]) #Load column 2 (T) and 58 (Mdc) from MPMS3 file
+    data_raw = np.loadtxt(files[i], delimiter=',', skiprows=headers, usecols=[2,58]) #Load column 2 (T) and 58 (Mdc) from MPMS3 file
     data = np.column_stack((data_raw[:,0],data_raw[:,1])) #Makes an array of T and Mdc data
     #Save files
     filename = ''.join(files[i].split())[:-4] #Removes last 4 characters (.dat) from filename
