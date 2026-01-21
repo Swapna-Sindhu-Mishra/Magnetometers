@@ -3,7 +3,7 @@ Inputs: *.dat files containing H and M columns separated by Tab. Background corr
 Parameters: folderpath, plot_name, headers
 Outputs: M vs H plots of all the *.dat files in a single figure saved in same folder.
 """
-folderpath = 'C:/Users/mishra/Downloads/MPMS3/MH_Corrected' #Location of inputs
+folderpath = '' #Location of inputs
 plot_name = 'Moment vs Field' #Name of the final plot
 headers = 0 #Number of headers in MH data file i.e lines to ignore when importing
 
